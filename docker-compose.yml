@@ -1,0 +1,10 @@
+version: '3.9'
+
+services:
+  app:
+    image: felddy/foundryvtt:release
+    ports:
+      - "30000:30000"
+    volumes:
+      - "/docker/foundryvtt/data:/data"
+    restart: unless-stopped
